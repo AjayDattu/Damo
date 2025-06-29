@@ -61,7 +61,7 @@ function Home() {
             <div className="text-base w-full text-left sm:text-lg md:text-xl lg:text-2xl font-light text-gray-400 max-w-3xl mx-auto">
               <div className="flex flex-col gap-5">
                 <p className="text-left w-full md:text-3x lg:text-5xl font-light text-white mx-auto">My Name is Ajay Dattu,</p>
-                <p> a final-year B.Tech student in Computer Science. I specialize in building beautiful, interactive web applications using modern technologies such as Next.js, React.js, animation libraries, UI libraries, and Tailwind CSS. I am constantly exploring new tools and frameworks to create optimized user experiences.
+                <p> a MERN Dev. I specialize in building beautiful, interactive web applications using modern technologies such as Next.js, React.js, animation libraries, UI libraries, and Tailwind CSS. I am constantly exploring new tools and frameworks to create optimized user experiences.
                 </p>
                 <a
                 href="https://drive.google.com/file/d/1_rripGFNuVqSaylO1n2LiyRwdJCDFJJR/view?usp=sharing"
