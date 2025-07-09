@@ -5,16 +5,15 @@ import {
   FiChevronDown,
   FiHome,
   FiPieChart,
-  FiUser, 
-  FiAward, 
-  FiTool, 
+  FiUser,
+  FiAward,
+  FiTool,
   FiBookOpen,
   FiBriefcase,
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 
 export const ShiftingDropDown = () => {
-     
   return (
     <div className="flex h-full w-full justify-start text-neutral-200 md:justify-center">
       <Tabs />
@@ -165,13 +164,10 @@ const Nub = ({ selected }) => {
   );
 };
 
-
 const Pricing = () => {
-    const [showScrollButton, setShowScrollButton] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
-    
-
     const handleScroll = () => {
       setShowScrollButton(window.scrollY > 300);
     };
@@ -189,14 +185,14 @@ const Pricing = () => {
   return (
     <div className="grid grid-cols-3 gap-4 divide-x divide-neutral-700">
       <div
-        onClick={() => scrollToSection("work") }
+        onClick={() => scrollToSection("work")}
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiBriefcase className="mb-2 text-xl text-indigo-300" />
         <span className="text-xs">works</span>
       </div>
       <div
-        onClick={() => scrollToSection("skills") }
+        onClick={() => scrollToSection("skills")}
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
@@ -217,7 +213,7 @@ const Pricing = () => {
         <span className="text-xs">Experience</span>
       </div>
       <div
-         onClick={() => scrollToSection("Ach")}
+        onClick={() => scrollToSection("Ach")}
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiAward className="mb-2 text-xl text-indigo-300" />
@@ -228,7 +224,7 @@ const Pricing = () => {
 };
 const Blog = () => {
   return (
-     <div className="grid grid-cols-2 gap-5">
+    <div className="grid grid-cols-2 gap-5">
       <div className="">
         <iframe
           src="https://www.youtube.com/embed/rk7jC7I7KRQ?si=FCWlbhOut700_D7N"
@@ -239,14 +235,16 @@ const Blog = () => {
         ></iframe>
         <h4 className="mb-0.5 text-xs font-medium">DSA with Jay: C++ STL</h4>
         <p className="text-xs text-neutral-400 h-20">
-          Learn the basics of STL in C++ and their applications in solving problems.
+          Learn the basics of STL in C++ and their applications in solving
+          problems.
         </p>
         <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
-        <a href="https://www.youtube.com/@Dsa_withjay">YouTube Channel</a>
-        <FiArrowRight />
-      </button>
+          <a href="https://www.youtube.com/@Dsa_withjay">YouTube Channel</a>
+          <FiArrowRight />
+        </button>
       </div>
-      <div><p>
+      <div>
+        <p>
           <img
             align="center"
             src="https://leetcard.jacoblin.cool/dattuajay005?theme=dark&font=Encode%20Sans%20Semi%20Expanded&ext=heatmap"
@@ -255,17 +253,17 @@ const Blog = () => {
           />
         </p>
         <h4 className="mb-0.5 text-xs font-medium">Damo Leetcode</h4>
-        <div className="text-xs text-neutral-400 h-20">This all My Dsa Journey if you want see more click on the below</div>
-         <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
-        <a href="https://leetcode.com/u/dattuajay005/">LeetCode</a>
-        <FiArrowRight />
+        <div className="text-xs text-neutral-400 h-20">
+          This all My Dsa Journey if you want see more click on the below
+        </div>
+        <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
+          <a href="https://leetcode.com/u/dattuajay005/">LeetCode</a>
+          <FiArrowRight />
         </button>
       </div>
-      
     </div>
   );
 };
-
 
 const TABS = [
   {
@@ -297,7 +295,7 @@ const TABS = [
 //             >
 //               About
 //             </button>
-    
+
 //               <ShiftingDropDown/>
 
 //             <button
@@ -312,7 +310,7 @@ const TABS = [
 //           <div className="md:hidden">
 //             <Menu/>
 //           </div>
-          
+
 //         </div>
 
 //         {isMenuOpen && (

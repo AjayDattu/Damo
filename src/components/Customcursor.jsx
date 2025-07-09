@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
 const MouseFollower = () => {
   const [isActive, setIsActive] = useState(false);
@@ -21,12 +21,12 @@ const MouseFollower = () => {
       }, 300);
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('click', handleClick);
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("click", handleClick);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('click', handleClick);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("click", handleClick);
     };
   }, []);
 
@@ -50,19 +50,23 @@ const MouseFollower = () => {
   return (
     <div
       ref={followerRef}
-      className={`follower ${isActive ? 'active' : ''}`}
+      className={`follower ${isActive ? "active" : ""}`}
       style={{
-        position: 'fixed',
-        width: isActive ? '50px' : '20px',
-        height: isActive ? '50px' : '20px',
-        background: isActive ? 'rgba(255, 87, 34, 0.3)' : 'rgba(255, 255, 255, 0.2)',
-        borderRadius: '50%',
-        pointerEvents: 'none',
-        transform: 'translate(-50%, -50%)',
-        backdropFilter: isActive ? 'blur(15px)' : 'blur(10px)',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06)',
-        border: '1px solid rgba(255, 255, 255, 0.3)',
-        transition: 'width 0.2s ease, height 0.2s ease, background-color 0.2s ease, backdrop-filter 0.2s ease',
+        position: "fixed",
+        width: isActive ? "50px" : "20px",
+        height: isActive ? "50px" : "20px",
+        background: isActive
+          ? "rgba(255, 87, 34, 0.3)"
+          : "rgba(255, 255, 255, 0.2)",
+        borderRadius: "50%",
+        pointerEvents: "none",
+        transform: "translate(-50%, -50%)",
+        backdropFilter: isActive ? "blur(15px)" : "blur(10px)",
+        boxShadow:
+          "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06)",
+        border: "1px solid rgba(255, 255, 255, 0.3)",
+        transition:
+          "width 0.2s ease, height 0.2s ease, background-color 0.2s ease, backdrop-filter 0.2s ease",
       }}
     />
   );

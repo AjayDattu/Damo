@@ -9,7 +9,6 @@ import { SiSpacex } from "react-icons/si";
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
 
- 
 const slugs = [
   "typescript",
   "javascript",
@@ -98,12 +97,12 @@ const CenterImage = () => {
   const backgroundSize = useTransform(
     scrollY,
     [0, SECTION_HEIGHT + 500],
-    ["170%", "100%"]
+    ["170%", "100%"],
   );
   const opacity = useTransform(
     scrollY,
     [SECTION_HEIGHT, SECTION_HEIGHT + 500],
-    [1, 0]
+    [1, 0],
   );
 
   return (
@@ -193,8 +192,7 @@ const Schedule = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
         className="mb-20 text-4xl font-black uppercase text-zinc-50"
-      >
-      </motion.h1> 
+      ></motion.h1>
     </section>
   );
 };

@@ -1,54 +1,52 @@
-.pulse{
-    border-radius: 50%;
-    position: relative;
+.pulse {
+  border-radius: 50%;
+  position: relative;
 }
-.pulse span{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.pulse span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
-    background:inherit;
-    border-radius: inherit;
-    opacity: .8;
-    animation: pulseAnimation 4s ease-out infinite;
-    animation-delay: calc(1s * var(--i));
-}
-
-@keyframes pulseAnimation{
-    100%{
-        opacity: 0;
-        transform: scale(2);
-    }
-
-}
-.pulse{
-    border-radius: 50%;
-    position: relative;
-}
-.pulse span{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    background:inherit;
-    border-radius: inherit;
-    opacity: .8;
-    animation: pulseAnimation 4s ease-out infinite;
-    animation-delay: calc(1s * var(--i));
+  background: inherit;
+  border-radius: inherit;
+  opacity: 0.8;
+  animation: pulseAnimation 4s ease-out infinite;
+  animation-delay: calc(1s * var(--i));
 }
 
-@keyframes pulseAnimation{
-    100%{
-        opacity: 0;
-        transform: scale(2);
-    }
+@keyframes pulseAnimation {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+.pulse {
+  border-radius: 50%;
+  position: relative;
+}
+.pulse span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
+  background: inherit;
+  border-radius: inherit;
+  opacity: 0.8;
+  animation: pulseAnimation 4s ease-out infinite;
+  animation-delay: calc(1s * var(--i));
+}
+
+@keyframes pulseAnimation {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
 }
 #cloud {
-  font-family: 'Open Sans', 'sans-serif';
+  font-family: "Open Sans", "sans-serif";
   font-size: 10px;
   bottom: 100px;
-  content: '';
+  content: "";
   opacity: 1;
   position: absolute;
   z-index: 100;
@@ -67,7 +65,3 @@
     top: 50px;
   }
 }
-
-
-
-

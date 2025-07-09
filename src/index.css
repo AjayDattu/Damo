@@ -1,27 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-  overflow-x: hidden;  
-  cursor: url('./assets/thanoscursor.png'), default;
+body {
+  overflow-x: hidden;
+  cursor: url("./assets/thanoscursor.png"), default;
   background-color: #000000;
 }
-body button{
-   cursor: url('./assets/buttoncursor.png'),pointer;
+body button {
+  cursor: url("./assets/buttoncursor.png"), pointer;
 }
 body a {
-  cursor: url('./assets/buttoncursor.png'), pointer;
+  cursor: url("./assets/buttoncursor.png"), pointer;
 }
-#tel{
+#tel {
   font-family: "Ponnala", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
 #cloud {
-  font-family: 'Open Sans', 'sans-serif';
+  font-family: "Open Sans", "sans-serif";
   font-size: 10px;
-  content: '';
+  content: "";
   opacity: 1;
   position: fixed;
   top: 50px;
@@ -31,12 +31,12 @@ body a {
 }
 
 @keyframes float {
-    50% {
-        top: 60px;
-    }    
-    100% { 
-        top: 50px;
-    }
+  50% {
+    top: 60px;
+  }
+  100% {
+    top: 50px;
+  }
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -57,5 +57,4 @@ body a {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #0084ff;
-;
 }

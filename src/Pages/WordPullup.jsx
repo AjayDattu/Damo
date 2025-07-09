@@ -8,7 +8,7 @@ const QuoteAnimation = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/MainPage");
-    },4000);
+    }, 4000);
 
     return () => clearTimeout(timer); // Cleanup timeout on unmount
   }, [navigate]);
@@ -27,15 +27,15 @@ const QuoteAnimation = () => {
         className="text-white text-xl md:text-4xl font-bold"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut",delay:1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
       >
-        conveys 
+        conveys
       </motion.h1>
       <motion.h2
         className="text-white text-xl md:text-4xl font-light"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut",delay:2 }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 2 }}
       >
         clarity.
       </motion.h2>

@@ -5,9 +5,9 @@ import {
   FiChevronDown,
   FiHome,
   FiPieChart,
-  FiUser, 
-  FiAward, 
-  FiTool, 
+  FiUser,
+  FiAward,
+  FiTool,
   FiBookOpen,
   FiBriefcase,
   FiActivity,
@@ -190,18 +190,46 @@ const Pricing = () => {
 };
 
 const MENU_ITEMS = [
-  { id: "work", label: "Works", icon: <FiBriefcase className="mb-1 text-base text-indigo-300" /> },
-  { id: "skills", label: "Skills", icon: <FiBarChart2 className="mb-1 text-base text-indigo-300" /> },
-  { id: "edu", label: "Education", icon: <FiBookOpen className="mb-1 text-base text-indigo-300" /> },
-  { id: "Exp", label: "Experience", icon: <FiUser className="mb-1 text-base text-indigo-300" /> },
-  { id: "Ach", label: "Achievements", icon: <FiAward className="mb-1 text-base text-indigo-300" /> },
-  { id: "contact", label: "Contact", icon: <FiPhone className="mb-1 text-base text-indigo-300" /> },
-  { id: "About", label: "About", icon: <FiActivity className="mb-1 text-base text-indigo-300" /> },
+  {
+    id: "work",
+    label: "Works",
+    icon: <FiBriefcase className="mb-1 text-base text-indigo-300" />,
+  },
+  {
+    id: "skills",
+    label: "Skills",
+    icon: <FiBarChart2 className="mb-1 text-base text-indigo-300" />,
+  },
+  {
+    id: "edu",
+    label: "Education",
+    icon: <FiBookOpen className="mb-1 text-base text-indigo-300" />,
+  },
+  {
+    id: "Exp",
+    label: "Experience",
+    icon: <FiUser className="mb-1 text-base text-indigo-300" />,
+  },
+  {
+    id: "Ach",
+    label: "Achievements",
+    icon: <FiAward className="mb-1 text-base text-indigo-300" />,
+  },
+  {
+    id: "contact",
+    label: "Contact",
+    icon: <FiPhone className="mb-1 text-base text-indigo-300" />,
+  },
+  {
+    id: "About",
+    label: "About",
+    icon: <FiActivity className="mb-1 text-base text-indigo-300" />,
+  },
 ];
 
 const Blog = () => {
   return (
-   <div className="grid grid-cols-2 gap-5">
+    <div className="grid grid-cols-2 gap-5">
       <div className="">
         <iframe
           src="https://www.youtube.com/embed/rk7jC7I7KRQ?si=FCWlbhOut700_D7N"
@@ -212,14 +240,16 @@ const Blog = () => {
         ></iframe>
         <h4 className="mb-0.5 text-xs font-medium">DSA with Jay: C++ STL</h4>
         <p className="text-xs text-neutral-400 h-20">
-          Learn the basics of STL in C++ and their applications in solving problems.
+          Learn the basics of STL in C++ and their applications in solving
+          problems.
         </p>
         <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
-        <a href="https://www.youtube.com/@Dsa_withjay">YouTube Channel</a>
-        <FiArrowRight />
-      </button>
+          <a href="https://www.youtube.com/@Dsa_withjay">YouTube Channel</a>
+          <FiArrowRight />
+        </button>
       </div>
-      <div><p>
+      <div>
+        <p>
           <img
             align="center"
             src="https://leetcard.jacoblin.cool/dattuajay005?theme=dark&font=Encode%20Sans%20Semi%20Expanded&ext=heatmap"
@@ -228,13 +258,14 @@ const Blog = () => {
           />
         </p>
         <h4 className="mb-0.5 text-xs font-medium">Damo Leetcode</h4>
-        <div className="text-xs text-neutral-400 h-20">This all My Dsa Journey if you want see more click on the below</div>
-         <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
-        <a href="https://leetcode.com/u/dattuajay005/">LeetCode</a>
-        <FiArrowRight />
+        <div className="text-xs text-neutral-400 h-20">
+          This all My Dsa Journey if you want see more click on the below
+        </div>
+        <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
+          <a href="https://leetcode.com/u/dattuajay005/">LeetCode</a>
+          <FiArrowRight />
         </button>
       </div>
-      
     </div>
   );
 };

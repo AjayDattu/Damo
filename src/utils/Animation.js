@@ -26,7 +26,7 @@ export const animatePageOut = (href, router) => {
   const bannerFour = document.getElementById("banner-4");
   if (bannerOne && bannerTwo && bannerThree && bannerFour) {
     const tl = gsap.timeline();
-    console.log("i AM")
+    console.log("i AM");
     tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
       yPercent: -100,
     }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {

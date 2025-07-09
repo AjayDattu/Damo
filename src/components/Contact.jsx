@@ -31,11 +31,13 @@ export function Contact() {
           subject: formData.subject,
           message: formData.message,
         },
-        "Qnx8Bn4NH1yc2Wyd7" // Replace with your user ID
+        "Qnx8Bn4NH1yc2Wyd7", // Replace with your user ID
       );
 
       if (result.status === 200) {
-        antdMessage.success("Got it! I’ll get back to you in no time. Thanks for getting in touch!");
+        antdMessage.success(
+          "Got it! I’ll get back to you in no time. Thanks for getting in touch!",
+        );
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         antdMessage.error("Failed to send message. Please try again.");

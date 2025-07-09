@@ -1,8 +1,9 @@
-
 #navbar {
-  cursor: url('../assets/circle-arrow-up-right-svgrepo-com.svg') 10 10 default;
+  cursor: url("../assets/circle-arrow-up-right-svgrepo-com.svg") 10 10 default;
   backdrop-filter: blur(10px);
-    background-image: linear-gradient(120deg,
-        rgba(46, 49, 54, 0.3),
-          rgba(255, 255, 255, 0.2));
+  background-image: linear-gradient(
+    120deg,
+    rgba(46, 49, 54, 0.3),
+    rgba(255, 255, 255, 0.2)
+  );
 }
