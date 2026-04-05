@@ -36,18 +36,33 @@ function Navbar() {
           data-aos="fade-in"
         >
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 px-2">
+          <div className="hidden md:flex space-x-10 px-6">
             <button
-              className="text-neutral-400 font-light hover:text-neutral-100 transition duration-300"
-              onClick={() => scrollToSection("About")}
+              className="text-black/50 font-light hover:text-black transition duration-300 transform hover:scale-105"
+              onClick={() => scrollToSection("home")}
             >
-              About
+              Home
             </button>
-
-            <ShiftingDropDown />
-
             <button
-              className="text-neutral-400 font-light hover:text-neutral-100 transition duration-300"
+              className="text-black/50 font-light hover:text-black transition duration-300 transform hover:scale-105"
+              onClick={() => scrollToSection("work")}
+            >
+              Works
+            </button>
+            <button
+              className="text-black/50 font-light hover:text-black transition duration-300 transform hover:scale-105"
+              onClick={() => scrollToSection("Edu")}
+            >
+              Education
+            </button>
+            <button
+              className="text-black/50 font-light hover:text-black transition duration-300 transform hover:scale-105"
+              onClick={() => scrollToSection("pricing")}
+            >
+              Pricing
+            </button>
+            <button
+              className="text-black/50 font-light hover:text-black transition duration-300 transform hover:scale-105"
               onClick={() => scrollToSection("contact")}
             >
               Contact

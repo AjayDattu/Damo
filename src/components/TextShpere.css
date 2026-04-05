@@ -5,9 +5,11 @@
   position: relative;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  min-height: 500px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .tagcloud {
@@ -16,12 +18,12 @@
   left: 0;
 }
 
-/* Change color of each text in sphere on hover   */
+/* Skills text color in light mode - black */
 .tagcloud--item {
-  color: #fff;
+  color: #000000;
   text-transform: uppercase;
 }
 
 .tagcloud--item:hover {
-  color: #ff6347;
+  color: #888888;
 }

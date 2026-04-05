@@ -51,18 +51,15 @@ export function Contact() {
   };
 
   return (
-    <div className="w-full mx-auto p-6 md:p-8 rounded-lg shadow-lg backdrop-blur-lg">
-      <h2 className="text-3xl font-light text-neutral-200">Contact Me</h2>
-      <p className="text-sm mt-2 text-neutral-300">
-        I build beautiful websites like this one.
+    <div className="w-full mx-auto p-10 rounded-3xl bg-brand-secondary/50 backdrop-blur-xl border border-black/5">
+      <h2 className="text-4xl font-light text-black tracking-tight">Contact Me</h2>
+      <p className="text-lg mt-4 text-black/60 font-light">
+        Feel free to reach out for projects, collaborations, or just to say hi.
       </p>
-      <p className="text-sm mt-2 text-neutral-300">
-        Feel free to reach out for projects, collaborations, or any queries.
-      </p>
-      <form onSubmit={handleSubmit} className="my-6 space-y-4">
+      <form onSubmit={handleSubmit} className="mt-10 space-y-6">
         {/* Name Field */}
-        <div>
-          <label htmlFor="name" className="block text-white mb-1">
+        <div className="space-y-2">
+          <label htmlFor="name" className="block text-sm font-medium text-black/40 uppercase tracking-widest">
             Your Name
           </label>
           <input
@@ -71,15 +68,15 @@ export function Contact() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-2 rounded bg-neutral-900 text-white focus:outline-none focus:ring focus:ring-blue-500"
+            className="w-full p-4 rounded-xl bg-white border border-black/5 text-black focus:outline-none focus:ring-2 focus:ring-black/5 transition-all"
             placeholder="John Doe"
             required
           />
         </div>
 
         {/* Email Field */}
-        <div>
-          <label htmlFor="email" className="block text-white mb-1">
+        <div className="space-y-2">
+          <label htmlFor="email" className="block text-sm font-medium text-black/40 uppercase tracking-widest">
             Email Address
           </label>
           <input
@@ -88,32 +85,15 @@ export function Contact() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-2 rounded bg-neutral-900 text-white focus:outline-none focus:ring focus:ring-blue-500"
-            placeholder="john.doe@example.com"
-            required
-          />
-        </div>
-
-        {/* Subject Field */}
-        <div>
-          <label htmlFor="subject" className="block text-white mb-1">
-            Subject
-          </label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            className="w-full p-2 rounded bg-neutral-900 text-white focus:outline-none focus:ring focus:ring-blue-500"
-            placeholder="Let's collaborate!"
+            className="w-full p-4 rounded-xl bg-white border border-black/5 text-black focus:outline-none focus:ring-2 focus:ring-black/5 transition-all"
+            placeholder="john@example.com"
             required
           />
         </div>
 
         {/* Message Field */}
-        <div>
-          <label htmlFor="message" className="block text-white mb-1">
+        <div className="space-y-2">
+          <label htmlFor="message" className="block text-sm font-medium text-black/40 uppercase tracking-widest">
             Message
           </label>
           <textarea
@@ -122,7 +102,7 @@ export function Contact() {
             value={formData.message}
             onChange={handleChange}
             rows={5}
-            className="w-full p-2 rounded bg-neutral-900 text-white focus:outline-none focus:ring focus:ring-blue-500"
+            className="w-full p-4 rounded-xl bg-white border border-black/5 text-black focus:outline-none focus:ring-2 focus:ring-black/5 transition-all resize-none"
             placeholder="Your message..."
             required
           ></textarea>
@@ -131,7 +111,7 @@ export function Contact() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+          className="w-full py-4 bg-black text-white rounded-xl text-lg font-light hover:bg-black/80 transition-all transform active:scale-95 disabled:opacity-50"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Sending..." : "Send Message"}

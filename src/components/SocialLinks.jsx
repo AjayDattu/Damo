@@ -18,9 +18,9 @@ const SocialLinks = () => {
           loop={true}
         />
 
-        <div className="text-blue-500">Want to know more..?</div>
+        <div className="text-black/50 font-light text-xl tracking-widest uppercase">Connect</div>
 
-        <div className="flex space-x-6 mt-6">
+        <div className="flex space-x-10 mt-10">
           {/* YouTube */}
           <Tooltip title="YouTube">
             <a
@@ -28,7 +28,7 @@ const SocialLinks = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <YoutubeOutlined className="text-white text-3xl hover:text-blue-400 transform transition-transform duration-300 hover:scale-125" />
+              <YoutubeOutlined className="text-black text-4xl hover:text-black/40 transition-all transform hover:scale-110" />
             </a>
           </Tooltip>
 
@@ -39,7 +39,7 @@ const SocialLinks = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkedinOutlined className="text-white text-3xl hover:text-blue-400 transform transition-transform duration-300 hover:scale-125" />
+              <LinkedinOutlined className="text-black text-4xl hover:text-black/40 transition-all transform hover:scale-110" />
             </a>
           </Tooltip>
 
@@ -52,11 +52,11 @@ const SocialLinks = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="24px"
+                height="32px"
                 viewBox="0 -960 960 960"
-                width="24px"
-                fill="#e8eaed"
-                className="transform transition-transform duration-300 hover:scale-125"
+                width="32px"
+                fill="black"
+                className="hover:fill-black/40 transition-all transform hover:scale-110"
               >
                 <path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-40-343 237-137-237-137-237 137 237 137ZM160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11L160-252Zm320-228Z" />
               </svg>
@@ -70,14 +70,14 @@ const SocialLinks = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GithubOutlined className="text-white text-3xl hover:text-blue-400 transform transition-transform duration-300 hover:scale-125" />
+              <GithubOutlined className="text-black text-4xl hover:text-black/40 transition-all transform hover:scale-110" />
             </a>
           </Tooltip>
 
           {/* Mobile Number */}
           <Tooltip title="Mobile Number">
             <a href="tel:+918106869354">
-              <MobileOutlined className="text-white text-3xl hover:text-blue-400 transform transition-transform duration-300 hover:scale-125" />
+              <MobileOutlined className="text-black text-4xl hover:text-black/40 transition-all transform hover:scale-110" />
             </a>
           </Tooltip>
         </div>

@@ -1,60 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
   overflow-x: hidden;
-  cursor: url("./assets/thanoscursor.png"), default;
-  background-color: #000000;
+  background-color: #F9F8F6;
+  color: black;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
-body button {
-  cursor: url("./assets/buttoncursor.png"), pointer;
-}
-body a {
-  cursor: url("./assets/buttoncursor.png"), pointer;
-}
+
 #tel {
   font-family: "Ponnala", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
-#cloud {
-  font-family: "Open Sans", "sans-serif";
-  font-size: 10px;
-  content: "";
-  opacity: 1;
-  position: fixed;
-  top: 50px;
-  left: 175px;
-  color: #fff;
-  animation: float 2s infinite ease-in-out;
-}
-
-@keyframes float {
-  50% {
-    top: 60px;
-  }
-  100% {
-    top: 50px;
-  }
-}
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fff;
-  border-radius: 5px;
+  background: #F9F8F6;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #cd06ff, #0084ff);
-  border-radius: 5px;
+  background: #000000;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #0084ff;
+  background: #333333;
 }
