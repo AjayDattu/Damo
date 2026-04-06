@@ -1,0 +1,40 @@
+.marquee-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: clamp(1.25rem, 3vw, 2.25rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 0 0.25rem;
+}
+
+/* Row 1 — scroll left */
+.marquee-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+/* Row 2 — scroll right */
+.marquee-right {
+  animation: scroll-right 35s linear infinite;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* Pause on hover for readability */
+.marquee-track:hover {
+  animation-play-state: paused;
+}

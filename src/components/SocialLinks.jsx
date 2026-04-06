@@ -6,81 +6,73 @@ import {
   MobileOutlined,
 } from "@ant-design/icons";
 import { Tooltip } from "antd";
-import animationData1 from "../assets/Animation - 1731684875975.json";
-import Lottie from "lottie-react";
+
+const SOCIAL = [
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@Dsa_withjay",
+    icon: <YoutubeOutlined />,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ajaydattu005/",
+    icon: <LinkedinOutlined />,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/AjayDattu",
+    icon: <GithubOutlined />,
+  },
+  {
+    label: "LeetCode",
+    href: "https://leetcode.com/dattuajay005/",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="18px"
+        viewBox="0 -960 960 960"
+        width="18px"
+        fill="currentColor"
+      >
+        <path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-40-343 237-137-237-137-237 137 237 137ZM160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11L160-252Zm320-228Z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Call",
+    href: "tel:+918106869354",
+    icon: <MobileOutlined />,
+  },
+];
+
 const SocialLinks = () => {
   return (
-    <div data-aos="zoom-in">
-      <div className="flex flex-col h-[50vh] justify-center items-center">
-        <Lottie
-          animationData={animationData1}
-          className="w-[30%] h-[50%]"
-          loop={true}
-        />
+    <div className="px-6 md:px-14 lg:px-20 py-16">
+      {/* Top divider row */}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <p className="text-xs uppercase tracking-[0.3em] text-black/30 font-light">
+          Let's connect
+        </p>
 
-        <div className="text-black/50 font-light text-xl tracking-widest uppercase">Connect</div>
-
-        <div className="flex space-x-10 mt-10">
-          {/* YouTube */}
-          <Tooltip title="YouTube">
-            <a
-              href="https://www.youtube.com/@Dsa_withjay"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <YoutubeOutlined className="text-black text-4xl hover:text-black/40 transition-all transform hover:scale-110" />
-            </a>
-          </Tooltip>
-
-          {/* LinkedIn */}
-          <Tooltip title="LinkedIn">
-            <a
-              href="https://www.linkedin.com/in/ajaydattu005/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedinOutlined className="text-black text-4xl hover:text-black/40 transition-all transform hover:scale-110" />
-            </a>
-          </Tooltip>
-
-          {/* LeetCode */}
-          <Tooltip title="LeetCode">
-            <a
-              href="https://leetcode.com/dattuajay005/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="32px"
-                viewBox="0 -960 960 960"
-                width="32px"
-                fill="black"
-                className="hover:fill-black/40 transition-all transform hover:scale-110"
+        {/* Icon links */}
+        <div className="flex items-center gap-8">
+          {SOCIAL.map(({ label, href, icon }) => (
+            <Tooltip key={label} title={label}>
+              <a
+                href={href}
+                target={href.startsWith("tel") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                className="text-black/40 hover:text-black transition-all duration-200 text-xl hover:scale-110 transform inline-flex"
               >
-                <path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-40-343 237-137-237-137-237 137 237 137ZM160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11L160-252Zm320-228Z" />
-              </svg>
-            </a>
-          </Tooltip>
-
-          {/* GitHub */}
-          <Tooltip title="GitHub">
-            <a
-              href="https://github.com/AjayDattu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GithubOutlined className="text-black text-4xl hover:text-black/40 transition-all transform hover:scale-110" />
-            </a>
-          </Tooltip>
-
-          {/* Mobile Number */}
-          <Tooltip title="Mobile Number">
-            <a href="tel:+918106869354">
-              <MobileOutlined className="text-black text-4xl hover:text-black/40 transition-all transform hover:scale-110" />
-            </a>
-          </Tooltip>
+                {icon}
+              </a>
+            </Tooltip>
+          ))}
         </div>
+
+        <p className="text-xs text-black/25 font-light">
+          © {new Date().getFullYear()} Ajay Dattu
+        </p>
       </div>
     </div>
   );

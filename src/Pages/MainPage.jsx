@@ -169,19 +169,18 @@ function Home() {
 
       <div
         id="contact"
-        className="py-32 px-6 md:px-14 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+        className="py-32 px-6 md:px-14 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start"
       >
         <div data-aos="fade-right">
-          <Lottie
-            animationData={animationData2}
-            loop={true}
-            className="w-full max-w-md mx-auto opacity-80"
-          />
+          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-6">Get in touch</p>
+          <h2 className="text-5xl md:text-6xl lg:text-8xl font-light tracking-tighter leading-none mb-8">
+            Let's<br/>talk.
+          </h2>
+          <p className="text-lg text-black/50 font-light max-w-sm leading-relaxed">
+            Have a project in mind or want to collaborate? I'd love to hear from you.
+          </p>
         </div>
         <div data-aos="fade-left">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-light mb-10 tracking-tighter">
-            Let's talk.
-          </h2>
           <Contact />
         </div>
       </div>

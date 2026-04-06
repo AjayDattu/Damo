@@ -7,6 +7,13 @@ body {
   background-color: #F9F8F6;
   color: black;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  cursor: default;
+}
+
+/* Only interactive elements get pointer cursor */
+a, button, [role="button"], label, select,
+.cursor-pointer, .tagcloud--item {
+  cursor: pointer;
 }
 
 #tel {

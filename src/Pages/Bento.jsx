@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import TextShpere from "../components/TextShpere";
+import MarqueeSkills from "../components/MarqueeSkills";
 import { videoData } from "../utils/constants";
 
 const AchievementsTable = () => {
@@ -215,12 +215,23 @@ const AchievementsTable = () => {
       </div>
 
       {/* Skills Section */}
-      <div id="skills" className="scroll-mt-32 overflow-hidden">
-        <h2 className="text-4xl md:text-5xl lg:text-7xl font-light mb-12 text-black tracking-tighter text-center">
-          Skills
-        </h2>
-        <div data-aos="zoom-in" className="flex justify-center py-10 scale-125 md:scale-150">
-          <TextShpere />
+      <div id="skills" className="scroll-mt-32">
+        <div className="flex items-end justify-between mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-light text-black tracking-tighter">
+            Skills
+          </h2>
+          <p className="text-sm text-black/35 font-light hidden md:block">
+            Hover to pause
+          </p>
+        </div>
+
+        {/* Fade masks on edges */}
+        <div className="relative">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 z-10"
+            style={{ background: "linear-gradient(to right, #F9F8F6, transparent)" }} />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 z-10"
+            style={{ background: "linear-gradient(to left, #F9F8F6, transparent)" }} />
+          <MarqueeSkills />
         </div>
       </div>
 
