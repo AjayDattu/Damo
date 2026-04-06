@@ -8,39 +8,47 @@ body {
   color: black;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   cursor: default;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Only interactive elements get pointer cursor */
-a, button, [role="button"], label, select,
-.cursor-pointer, .tagcloud--item {
-  cursor: pointer;
+.dark body {
+  background-color: #0A0A0A;
+  color: #F9F8F6;
 }
 
-#tel {
-  font-family: "Ponnala", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #F9F8F6;
+  background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #000000;
-  border-radius: 10px;
+  border-radius: 100px;
+  border: 2px solid #F9F8F6;
+  transition: background 0.3s ease;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #FFFFFF;
+  border: 2px solid #0A0A0A;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #333333;
 }
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #E5E5E5;
+}
+
+
 
 /* Lenis Recommended Styles */
 html.lenis, html.lenis body {

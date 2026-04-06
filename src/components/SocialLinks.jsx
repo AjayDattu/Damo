@@ -47,22 +47,22 @@ const SOCIAL = [
 
 const SocialLinks = () => {
   return (
-    <div className="px-6 md:px-14 lg:px-20 py-16">
+    <div className="px-6 md:px-14 lg:px-24 py-20 bg-white dark:bg-black transition-colors duration-400">
       {/* Top divider row */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-        <p className="text-xs uppercase tracking-[0.3em] text-black/30 font-light">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12 border-t border-black/5 dark:border-white/5 pt-12">
+        <p className="text-[10px] uppercase tracking-[0.4em] text-black/40 dark:text-white/40 font-bold">
           Let's connect
         </p>
 
         {/* Icon links */}
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-10">
           {SOCIAL.map(({ label, href, icon }) => (
             <Tooltip key={label} title={label}>
               <a
                 href={href}
                 target={href.startsWith("tel") ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                className="text-black/40 hover:text-black transition-all duration-200 text-xl hover:scale-110 transform inline-flex"
+                className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all duration-300 text-2xl hover:scale-110 transform inline-flex"
               >
                 {icon}
               </a>
@@ -70,11 +70,13 @@ const SocialLinks = () => {
           ))}
         </div>
 
-        <p className="text-xs text-black/25 font-light">
-          © {new Date().getFullYear()} Ajay Dattu
+        <p className="text-[10px] text-black/30 dark:text-white/30 font-medium uppercase tracking-widest">
+          © {new Date().getFullYear()} Ajay Dattu · Professional Portfolio
         </p>
       </div>
     </div>
+
+
   );
 };
 

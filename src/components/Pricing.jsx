@@ -77,79 +77,76 @@ export default function Pricing() {
   }, []);
 
   return (
-    <section id="pricing" className="scroll-mt-32 px-6 md:px-14 lg:px-20 py-32 bg-brand-bg">
+    <section id="pricing" className="scroll-mt-32 px-6 md:px-14 lg:px-24 py-40 bg-white dark:bg-black transition-colors duration-400">
       {/* Section header */}
-      <div className="mb-16" data-aos="fade-up">
-        <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">Pricing</p>
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter text-black leading-none">
-            Simple,<br />transparent pricing.
+      <div className="mb-20" data-aos="fade-up">
+        <p className="text-[10px] uppercase tracking-[0.4em] text-black/30 dark:text-white/30 mb-6 font-bold">Investment</p>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tighter text-black dark:text-white leading-[0.9] border-l-4 border-black dark:border-white pl-8">
+            Simple,<br />transparent<br />pricing.
           </h2>
-          <p className="text-lg text-black/50 font-light max-w-sm">
-            No hidden fees. Choose the plan that fits your project — or reach out for a custom quote.
+          <p className="text-xl text-black/50 dark:text-white/50 font-light max-w-sm leading-relaxed tracking-tight">
+            Clear-cut tiers for projects of all sizes. No surprises, just high-quality engineering delivered on schedule.
           </p>
         </div>
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         {plans.map((plan, i) => (
           <div
             key={plan.name}
             data-aos="fade-up"
             data-aos-delay={i * 100}
-            className={`relative flex flex-col rounded-3xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 ${
+            className={`relative flex flex-col rounded-[2.5rem] p-10 md:p-12 transition-all duration-500 hover:scale-[1.02] border ${
               plan.highlighted
-                ? "bg-black text-white shadow-2xl"
-                : "bg-brand-secondary/50 border border-black/5 text-black"
+                ? "bg-black dark:bg-white text-white dark:text-black border-black dark:border-white shadow-2xl"
+                : "bg-black/5 dark:bg-white/5 border-black/5 dark:border-white/5 text-black dark:text-white"
             }`}
           >
             {/* Popular badge */}
             {plan.highlighted && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="px-5 py-1.5 rounded-full bg-white text-black text-xs font-medium tracking-widest uppercase shadow-md">
+              <div className="absolute -top-5 left-10">
+                <span className="px-6 py-2 rounded-full bg-white dark:bg-black text-black dark:text-white text-[10px] font-bold tracking-[0.2em] uppercase shadow-xl ring-1 ring-black/5 dark:ring-white/5">
                   Most Popular
                 </span>
               </div>
             )}
 
             {/* Plan name & tagline */}
-            <div className="mb-8">
-              <p className={`text-xs uppercase tracking-widest mb-2 ${plan.highlighted ? "text-white/40" : "text-black/35"}`}>
+            <div className="mb-10">
+              <p className={`text-[10px] uppercase tracking-[0.3em] font-bold mb-4 ${plan.highlighted ? "text-white/50 dark:text-black/50" : "text-black/30 dark:text-white/30"}`}>
                 {plan.name}
               </p>
-              <div className="flex items-end gap-1 mb-3">
-                <span className="text-5xl md:text-6xl font-light tracking-tight">{plan.price}</span>
+              <div className="flex items-end gap-2 mb-4">
+                <span className="text-6xl md:text-7xl font-light tracking-tighter">{plan.price}</span>
                 {plan.period && (
-                  <span className={`pb-2 font-light ${plan.highlighted ? "text-white/40" : "text-black/35"}`}>
+                  <span className={`text-sm pb-3 font-medium uppercase tracking-widest ${plan.highlighted ? "text-white/40 dark:text-black/40" : "text-black/30 dark:text-white/30"}`}>
                     {plan.period}
                   </span>
                 )}
               </div>
-              <p className={`text-sm font-light ${plan.highlighted ? "text-white/60" : "text-black/50"}`}>
+              <p className={`text-lg font-light leading-snug tracking-tight ${plan.highlighted ? "text-white/70 dark:text-black/70" : "text-black/50 dark:text-white/50"}`}>
                 {plan.tagline}
               </p>
             </div>
 
-            {/* Divider */}
-            <div className={`h-px mb-8 ${plan.highlighted ? "bg-white/10" : "bg-black/5"}`} />
-
             {/* Features */}
-            <ul className="flex flex-col gap-3 flex-1 mb-10">
+            <ul className="flex flex-col gap-4 flex-1 mb-12">
               {plan.features.map((f) => (
-                <li key={f} className="flex items-center gap-3 text-sm font-light">
-                  <span className={plan.highlighted ? "text-white" : "text-black"}>
+                <li key={f} className="flex items-start gap-4 text-sm font-light leading-relaxed">
+                  <span className={`mt-1 ${plan.highlighted ? "text-white dark:text-black" : "text-black/40 dark:text-white/40"}`}>
                     <CheckIcon />
                   </span>
-                  <span className={plan.highlighted ? "text-white/80" : "text-black/70"}>{f}</span>
+                  <span className={plan.highlighted ? "text-white/90 dark:text-black/90" : "text-black/70 dark:text-white/70"}>{f}</span>
                 </li>
               ))}
               {plan.notIncluded.map((f) => (
-                <li key={f} className="flex items-center gap-3 text-sm font-light">
-                  <span>
+                <li key={f} className="flex items-start gap-4 text-sm font-light leading-relaxed opacity-40">
+                  <span className="mt-1">
                     <CrossIcon />
                   </span>
-                  <span className={`line-through ${plan.highlighted ? "text-white/25" : "text-black/25"}`}>{f}</span>
+                  <span className="line-through">{f}</span>
                 </li>
               ))}
             </ul>
@@ -161,18 +158,18 @@ export default function Pricing() {
                 e.preventDefault();
                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className={`group flex items-center justify-between px-6 py-4 rounded-2xl text-sm font-light tracking-wide transition-all ${
+              className={`group flex items-center justify-between px-8 py-5 rounded-2xl text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 ${
                 plan.highlighted
-                  ? "bg-white text-black hover:bg-white/90"
-                  : "bg-black text-white hover:bg-black/80"
+                  ? "bg-white dark:bg-black text-black dark:text-white hover:scale-[0.97]"
+                  : "bg-black dark:bg-white text-white dark:text-black hover:scale-[0.97]"
               }`}
             >
-              <span>{plan.name === "Enterprise" ? "Let's Talk" : "Get Started"}</span>
+              <span>{plan.name === "Enterprise" ? "Consult" : "Initiate"}</span>
               <svg
                 className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="3"
                 viewBox="0 0 24 24"
               >
                 <path d="M7 17L17 7M17 7H7M17 7v10" />
@@ -183,16 +180,17 @@ export default function Pricing() {
       </div>
 
       {/* Footer note */}
-      <p className="text-center text-sm text-black/35 font-light mt-12" data-aos="fade-up">
-        All prices are starting estimates. Final pricing depends on project scope and requirements. &nbsp;
+
+      <p className="text-center text-[10px] uppercase tracking-[0.2em] text-black/30 dark:text-white/30 mt-20" data-aos="fade-up">
+        All prices are starting estimates · &nbsp;
         <button
           onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-          className="underline underline-offset-4 hover:text-black/60 transition-colors"
+          className="underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors"
         >
-          Contact me
+          Request custom quote
         </button>
-        &nbsp;for a custom quote.
       </p>
     </section>
   );
 }
+

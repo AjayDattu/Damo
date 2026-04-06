@@ -15,15 +15,15 @@ const QuoteAnimation = () => {
   }, [navigate]);
 
   return (
-    <div className="h-screen w-full flex flex-col justify-center items-center bg-[#F9F8F6] relative overflow-hidden">
+    <div className="h-screen w-full flex flex-col justify-center items-center bg-white dark:bg-black relative overflow-hidden transition-colors duration-700">
 
       {/* Subtle ambient glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[600px] h-[600px] rounded-full bg-[#EFE9E3] blur-[120px] opacity-60" />
+        <div className="w-[600px] h-[600px] rounded-full bg-black/5 dark:bg-white/5 blur-[120px] opacity-60" />
       </div>
 
       {/* Words */}
-      <div className="relative flex items-baseline justify-center px-6 whitespace-nowrap">
+      <div className="relative flex items-center justify-center px-6 whitespace-nowrap">
         {words.map((word, i) => (
           <motion.span
             key={word}
@@ -34,10 +34,10 @@ const QuoteAnimation = () => {
               ease: [0.22, 1, 0.36, 1],
               delay: i * 0.5,
             }}
-            className={`text-black tracking-tight select-none mx-2 ${
+            className={`text-black dark:text-white tracking-tighter select-none mx-3 ${
               i === 1
-                ? "text-xl md:text-3xl lg:text-4xl font-semibold"
-                : "text-xl md:text-3xl lg:text-4xl font-light"
+                ? "text-2xl md:text-4xl lg:text-5xl font-semibold italic"
+                : "text-2xl md:text-4xl lg:text-5xl font-light"
             }`}
           >
             {word}
@@ -46,14 +46,17 @@ const QuoteAnimation = () => {
       </div>
 
       {/* Subtle progress line */}
-      <motion.div
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 h-px bg-black/10"
-        initial={{ width: 0 }}
-        animate={{ width: "80px" }}
-        transition={{ duration: 3.8, ease: "linear" }}
-      />
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 w-20 h-px bg-black/5 dark:bg-white/5 overflow-hidden">
+        <motion.div
+          className="h-full bg-black dark:bg-white"
+          initial={{ x: "-100%" }}
+          animate={{ x: "0%" }}
+          transition={{ duration: 4, ease: "linear" }}
+        />
+      </div>
     </div>
   );
 };
+
 
 export default QuoteAnimation;

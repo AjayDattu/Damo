@@ -15,8 +15,9 @@ const ROW_2 = [
 ];
 
 const Dot = () => (
-  <span className="mx-4 text-black/20 select-none">·</span>
+  <span className="mx-6 text-black/10 dark:text-white/10 select-none">·</span>
 );
+
 
 export default function MarqueeSkills() {
   return (

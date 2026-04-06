@@ -51,59 +51,57 @@ export function Contact() {
   };
 
   return (
-    <div className="w-full mx-auto p-10 rounded-3xl bg-brand-secondary/50 backdrop-blur-xl border border-black/5">
-      <h2 className="text-4xl font-light text-black tracking-tight">Contact Me</h2>
-      <p className="text-lg mt-4 text-black/60 font-light">
-        Feel free to reach out for projects, collaborations, or just to say hi.
-      </p>
-      <form onSubmit={handleSubmit} className="mt-10 space-y-6">
-        {/* Name Field */}
-        <div className="space-y-2">
-          <label htmlFor="name" className="block text-sm font-medium text-black/40 uppercase tracking-widest">
-            Your Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full p-4 rounded-xl bg-white border border-black/5 text-black focus:outline-none focus:ring-2 focus:ring-black/5 transition-all"
-            placeholder="John Doe"
-            required
-          />
-        </div>
+    <div className="w-full mx-auto">
+      <form onSubmit={handleSubmit} className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Name Field */}
+          <div className="space-y-3">
+            <label htmlFor="name" className="block text-[10px] font-bold text-black/40 dark:text-white/40 uppercase tracking-[0.2em]">
+              Identification
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full p-5 rounded-2xl bg-white dark:bg-black border border-black/10 dark:border-white/10 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all placeholder:text-black/20 dark:placeholder:text-white/20 font-light"
+              placeholder="Name or Organization"
+              required
+            />
+          </div>
 
-        {/* Email Field */}
-        <div className="space-y-2">
-          <label htmlFor="email" className="block text-sm font-medium text-black/40 uppercase tracking-widest">
-            Email Address
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-4 rounded-xl bg-white border border-black/5 text-black focus:outline-none focus:ring-2 focus:ring-black/5 transition-all"
-            placeholder="john@example.com"
-            required
-          />
+          {/* Email Field */}
+          <div className="space-y-3">
+            <label htmlFor="email" className="block text-[10px] font-bold text-black/40 dark:text-white/40 uppercase tracking-[0.2em]">
+              Electronic Mail
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full p-5 rounded-2xl bg-white dark:bg-black border border-black/10 dark:border-white/10 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all placeholder:text-black/20 dark:placeholder:text-white/20 font-light"
+              placeholder="email@example.com"
+              required
+            />
+          </div>
         </div>
 
         {/* Message Field */}
-        <div className="space-y-2">
-          <label htmlFor="message" className="block text-sm font-medium text-black/40 uppercase tracking-widest">
-            Message
+        <div className="space-y-3">
+          <label htmlFor="message" className="block text-[10px] font-bold text-black/40 dark:text-white/40 uppercase tracking-[0.2em]">
+            Brief / Inquiry
           </label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            rows={5}
-            className="w-full p-4 rounded-xl bg-white border border-black/5 text-black focus:outline-none focus:ring-2 focus:ring-black/5 transition-all resize-none"
-            placeholder="Your message..."
+            rows={6}
+            className="w-full p-6 rounded-2xl bg-white dark:bg-black border border-black/10 dark:border-white/10 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all resize-none placeholder:text-black/20 dark:placeholder:text-white/20 font-light leading-relaxed"
+            placeholder="Describe your project goals..."
             required
           ></textarea>
         </div>
@@ -111,12 +109,16 @@ export function Contact() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full py-4 bg-black text-white rounded-xl text-lg font-light hover:bg-black/80 transition-all transform active:scale-95 disabled:opacity-50"
+          className="group relative w-full py-6 bg-black dark:bg-white text-white dark:text-black rounded-2xl text-xs font-bold uppercase tracking-[0.3em] overflow-hidden transition-all duration-500 hover:scale-[0.99] active:scale-95 disabled:opacity-50"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Sending..." : "Send Message"}
+          <span className="relative z-10">
+            {isSubmitting ? "Transmitting..." : "Send Submission"}
+          </span>
+          <div className="absolute inset-0 bg-white/20 dark:bg-black/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
         </button>
       </form>
     </div>
   );
 }
+
