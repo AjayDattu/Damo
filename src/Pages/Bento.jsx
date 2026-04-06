@@ -124,7 +124,7 @@ const AchievementsTable = () => {
     <div className="flex flex-col p-4 md:p-10 lg:p-20 space-y-32">
       {/* Works Section - Grid View */}
       <div id="work" className="scroll-mt-32">
-        <h2 className="text-4xl md:text-5xl lg:text-7xl font-light mb-12 text-black dark:text-white tracking-tighter">
+        <h2 className="text-4xl md:text-5xl lg:text-7xl font-light mb-12 text-black tracking-tighter">
           Works
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -134,7 +134,7 @@ const AchievementsTable = () => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
               onClick={() => navigate(`/project/${project.id}`)}
-              className="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer bg-brand-secondary dark:bg-neutral-900 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              className="group relative aspect-video overflow-hidden rounded-2xl cursor-pointer bg-brand-secondary transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
             >
               <video
                 className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
@@ -176,7 +176,7 @@ const AchievementsTable = () => {
                   {exp.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 rounded-full border border-black/10 bg-brand-secondary text-xs uppercase tracking-wider"
+                      className="px-3 py-1 rounded-full border border-black/10 bg-brand-secondary text-xs uppercase tracking-wider text-black"
                     >
                       {tech}
                     </span>
