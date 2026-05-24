@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:itunes.apple.com)",
+      "Bash(npx vite *)"
+    ]
+  }
+}

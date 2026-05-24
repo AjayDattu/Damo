@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import AchievementsTable from "./Bento";
@@ -8,8 +9,13 @@ import Navbar from "../components/Navbar";
 import Pricing from "../components/Pricing";
 import StatsSection from "../components/StatsSection";
 
+const HERO_NAME = ["A", "j", "a", "y"];
+const HERO_LAST = ["D", "a", "t", "t", "u"];
+
 function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 });
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -22,6 +28,11 @@ function Home() {
 
   return (
     <main className="min-h-screen flex flex-col bg-white dark:bg-black text-black dark:text-white transition-colors duration-400 overflow-x-hidden">
+      {/* Scroll progress bar */}
+      <motion.div
+        style={{ scaleX, transformOrigin: "left" }}
+        className="fixed top-0 left-0 right-0 h-[2px] bg-black dark:bg-white z-[200]"
+      />
       <Navbar />
 
       {/* ─── HERO ────────────────────────────────────────────────────────── */}
@@ -72,12 +83,35 @@ function Home() {
         {/* ── MAIN HEADLINE ── */}
         <div className="flex-1 flex flex-col justify-center">
           <h1
-            className="font-light tracking-[-0.05em] leading-[0.85] uppercase select-none"
-            style={{ fontSize: "clamp(4.5rem, 14vw, 15rem)" }}
-            data-aos="fade-up"
+            className="font-light tracking-[-0.05em] leading-[0.85] uppercase select-none overflow-hidden"
+            style={{ fontSize: "clamp(3.5rem, 13vw, 15rem)" }}
           >
-            <span className="block text-black dark:text-white">Ajay</span>
-            <span className="block text-black/10 dark:text-white/10 italic">Dattu</span>
+            <span className="block text-black dark:text-white overflow-hidden">
+              {HERO_NAME.map((letter, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ y: "110%", opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.7, delay: 0.1 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                  className="inline-block"
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </span>
+            <span className="block text-black/10 dark:text-white/10 italic overflow-hidden">
+              {HERO_LAST.map((letter, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ y: "110%", opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.7, delay: 0.35 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                  className="inline-block"
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </span>
           </h1>
 
           {/* ── Bottom info bar ── */}

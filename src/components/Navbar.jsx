@@ -6,6 +6,7 @@ import name from "../assets/Ajay.svg";
 const NAV_LINKS = [
   { label: "Home",        id: "home" },
   { label: "Works",       id: "work" },
+  { label: "Apps",        id: "mobile-apps" },
   { label: "Education",   id: "edu" },
   { label: "Pricing",     id: "pricing" },
   { label: "Contact",     id: "contact" },
@@ -13,7 +14,26 @@ const NAV_LINKS = [
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    const sectionIds = NAV_LINKS.map((l) => l.id);
+    const observers = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
+        { threshold: 0.25, rootMargin: "-80px 0px -40% 0px" }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
 
   const scrollToSection = (id) => {
     setIsMenuOpen(false);
@@ -49,10 +69,18 @@ function Navbar() {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-black/50 dark:text-white/50 font-normal text-sm hover:text-black dark:hover:text-white transition-all duration-300 relative group"
+                  className={`font-normal text-sm transition-all duration-300 relative group ${
+                    activeSection === link.id
+                      ? "text-black dark:text-white"
+                      : "text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white"
+                  }`}
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black dark:bg-white transition-all duration-300 group-hover:w-full" />
+                  <span
+                    className={`absolute -bottom-1 left-0 h-[1px] bg-black dark:bg-white transition-all duration-300 ${
+                      activeSection === link.id ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
                 </button>
               ))}
               

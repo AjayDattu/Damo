@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   YoutubeOutlined,
   LinkedinOutlined,
@@ -48,24 +49,28 @@ const SOCIAL = [
 const SocialLinks = () => {
   return (
     <div className="px-6 md:px-14 lg:px-24 py-20 bg-white dark:bg-black transition-colors duration-400">
-      {/* Top divider row */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12 border-t border-black/5 dark:border-white/5 pt-12">
         <p className="text-[10px] uppercase tracking-[0.4em] text-black/40 dark:text-white/40 font-bold">
           Let's connect
         </p>
 
-        {/* Icon links */}
+        {/* Icon links with stagger */}
         <div className="flex items-center gap-10">
-          {SOCIAL.map(({ label, href, icon }) => (
+          {SOCIAL.map(({ label, href, icon }, i) => (
             <Tooltip key={label} title={label}>
-              <a
+              <motion.a
                 href={href}
                 target={href.startsWith("tel") ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all duration-300 text-2xl hover:scale-110 transform inline-flex"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.4 }}
+                whileHover={{ y: -4, scale: 1.15 }}
+                className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-colors duration-300 text-2xl inline-flex"
               >
                 {icon}
-              </a>
+              </motion.a>
             </Tooltip>
           ))}
         </div>
@@ -75,8 +80,6 @@ const SocialLinks = () => {
         </p>
       </div>
     </div>
-
-
   );
 };
 
