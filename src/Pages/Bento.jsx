@@ -59,15 +59,16 @@ const AchievementsTable = () => {
   const experience = [
     {
       year: "2025 - Present",
-      title: "Full Stack Developer",
+      title: "Software Engineer — SDE 1",
       company: "Memoa",
       location: "USA (Remote)",
       points: [
-        "Architected core features including the interactive streaks mechanism.",
+        "Architected core features including the interactive streaks mechanism across the React Native Expo mobile app.",
+        "Implemented In-App Purchases (IAP) with subscription tiers for both iOS and Android platforms.",
         "Collaborated on building highly scalable components and complex state management.",
         "Focused on performance optimization and maintaining clean code architecture.",
       ],
-      technologies: ["React", "Next.js", "Node.js", "MongoDB", "Redux"],
+      technologies: ["React Native", "Expo", "React", "Next.js", "Node.js", "MongoDB", "Redux", "In-App Purchases"],
     },
     {
       year: "Jan 2025 - Jun 2025",

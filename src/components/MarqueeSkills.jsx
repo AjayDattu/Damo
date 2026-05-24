@@ -1,9 +1,9 @@
 import "./MarqueeSkills.css";
 
 const ROW_1 = [
-  "React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS",
+  "React", "Next.js", "React Native", "Expo", "TypeScript", "JavaScript", "Tailwind CSS",
   "GSAP", "Framer Motion", "Redux", "HTML5", "CSS3",
-  "React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS",
+  "React", "Next.js", "React Native", "Expo", "TypeScript", "JavaScript", "Tailwind CSS",
   "GSAP", "Framer Motion", "Redux", "HTML5", "CSS3",
 ];
 
