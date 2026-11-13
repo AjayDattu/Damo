@@ -20,7 +20,7 @@ export const profile = {
     { label: "LinkedIn", href: "https://www.linkedin.com/in/ajaydattu005/", icon: "linkedin" },
     { label: "GitHub", href: "https://github.com/AjayDattu", icon: "github" },
     { label: "LeetCode", href: "https://leetcode.com/dattuajay005/", icon: "leetcode" },
-    { label: "YouTube", href: "https://www.youtube.com/@Dsa_withjay", icon: "youtube" },
+    { label: "YouTube", href: "https://youtube.com/@flash_byte_404", icon: "youtube" },
   ],
 };
 
