@@ -1,21 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
-      colors: {
-        brand: {
-          bg: "#F9F8F6",
-          darkBg: "#0A0A0A",
-          secondary: "#EFE9E3",
-          darkSecondary: "#1A1A1A",
-          text: "#000000",
-          darkText: "#F9F8F6",
-        },
+      fontFamily: {
+        display: ["Syne", "sans-serif"],
+        sans: ['"DM Sans"', "system-ui", "sans-serif"],
+        script: ['"Mrs Saint Delafield"', "cursive"],
       },
+      colors: {
+        ink: "#080808",
+        mute: "#696969",
+        soft: "#F5F5F5",
+        peach: "#FFE9D9",
+        amber: "#FFB646",
+        orange: "#FF9A2E",
+      },
+      maxWidth: { site: "1270px" },
     },
   },
   plugins: [],
 };
-

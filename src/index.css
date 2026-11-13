@@ -2,71 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
-  background-color: #F9F8F6;
-  color: black;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  cursor: default;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  background-color: #ffffff;
+  color: #696969;
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-.dark body {
-  background-color: #0A0A0A;
-  color: #F9F8F6;
+h1, h2, h3, h4 {
+  font-family: "Syne", sans-serif;
+  color: #080808;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: #080808;
   border-radius: 100px;
-  border: 2px solid #F9F8F6;
-  transition: background 0.3s ease;
+  border: 2px solid #ffffff;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: #FFFFFF;
-  border: 2px solid #0A0A0A;
+/* Outlined display text ("Years of experience") */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px #080808;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #333333;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #E5E5E5;
-}
-
-
-
-/* Lenis Recommended Styles */
-html.lenis, html.lenis body {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
-}
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
