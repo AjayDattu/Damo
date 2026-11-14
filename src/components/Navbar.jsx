@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Arrow, SocialIcon } from "./ui";
 import { profile } from "../data/profile";
-import logo from "../assets/Ajay.svg";
 
 const LINKS = [
   { label: "Home", to: "/" },
@@ -28,7 +27,7 @@ function Navbar() {
       <header className="fixed inset-x-0 top-0 z-[60] border-b border-ink/15 bg-peach/90 backdrop-blur-md">
         <div className="flex h-[72px] w-full items-center justify-between pl-6 md:pl-[max(2.5rem,calc((100%-1270px)/2+2.5rem))]">
           <Link to="/" className="flex items-center" aria-label="Home">
-            <img src={logo} alt="Ajay" className="h-6 w-auto" />
+            <span className="font-display text-2xl font-bold uppercase leading-none tracking-[-0.02em] text-ink">Ajay</span>
           </Link>
 
           <div className="flex h-full items-center">
