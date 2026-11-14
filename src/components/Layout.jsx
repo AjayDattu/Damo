@@ -16,7 +16,7 @@ function Layout() {
   }, [pathname, hash]);
 
   return (
-    <div className="min-h-screen bg-white text-mute">
+    <div className="min-h-screen w-full overflow-x-clip bg-white text-mute">
       <Navbar />
       <main className="pt-[72px]">
         <Outlet />

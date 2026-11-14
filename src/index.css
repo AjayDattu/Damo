@@ -4,10 +4,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
   background-color: #ffffff;
   color: #696969;
   font-family: "DM Sans", system-ui, -apple-system, sans-serif;

@@ -2,10 +2,13 @@ import { Container, Dot, Eyebrow, Heading } from "../components/ui";
 import { AppCard, ProjectCard } from "../components/Portfolio";
 import { apps } from "../data/profile";
 import { videoData } from "../utils/constants";
+import Seo from "../components/Seo";
+import { pages } from "../data/seo";
 
 function Projects() {
   return (
     <>
+      <Seo {...pages["/projects"]} path="/projects" />
       <section className="bg-peach py-20 md:py-28">
         <Container className="text-center">
           <Eyebrow>Portfolio</Eyebrow>

@@ -49,7 +49,7 @@ function Footer() {
         <p
           aria-hidden
           className="mt-20 select-none whitespace-nowrap text-center font-display font-extrabold uppercase leading-none tracking-tight text-peach"
-          style={{ fontSize: "clamp(2.6rem, 11.2vw, 11.5rem)" }}
+          style={{ fontSize: "clamp(2rem, 11.2vw, 11.5rem)" }}
         >
           {profile.firstName} {profile.lastName}
         </p>

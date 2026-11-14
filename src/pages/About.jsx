@@ -2,11 +2,14 @@ import { Arrow, Container, Eyebrow, Heading, Dot } from "../components/ui";
 import { Counters, YearsBadge } from "../components/AboutIntro";
 import Resume from "../components/Resume";
 import { profile } from "../data/profile";
+import Seo from "../components/Seo";
+import { pages, SITE_URL } from "../data/seo";
 
 function About() {
   const name = `${profile.firstName} ${profile.lastName}`;
   return (
     <>
+      <Seo {...pages["/about"]} path="/about" jsonLd={{ "@context": "https://schema.org", "@type": "AboutPage", url: `${SITE_URL}/about`, name: pages["/about"].title }} />
       {/* Header: portrait on an amber half-circle, intro on the right */}
       <section className="bg-peach py-20 md:py-28">
         <Container>
