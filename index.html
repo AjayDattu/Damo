@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@500;600;700;800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet" />
 
+    <!-- First paint: peach background, and keep the pre-rendered SEO text (read by crawlers) off-screen so it never flashes before the app mounts. -->
+    <style id="boot-style">
+      html, body { background: #FFE9D9 !important; margin: 0; }
+      #root > nav, #root > main { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    </style>
     <title>Ajay Dattu — Full-stack Developer | React Native, React, Next.js, Node.js</title>
     <meta name="description" content="Ajay Dattu is a full-stack software developer from India building React Native mobile apps, React and Next.js web platforms and Node.js APIs. Two apps live on the App Store, 550+ LeetCode problems solved. Available for hire." />
     <meta name="keywords" content="full-stack developer, software developer India, React Native developer, React developer, Next.js developer, Node.js developer, mobile app developer, hire freelance developer, in-app purchases, Expo developer, portfolio" />

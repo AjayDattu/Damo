@@ -14,6 +14,7 @@ function Intro({ children }) {
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
+    document.getElementById("boot-style")?.remove(); // the splash now covers the screen
     const end = setTimeout(() => setDone(true), FALLBACK);
     let raf, hold, cancelled = false;
 
